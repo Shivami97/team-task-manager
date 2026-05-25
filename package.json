@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "node scripts/db-prep.js && prisma generate && prisma db push && next dev",
-    "build": "node scripts/db-prep.js && prisma generate && prisma db push && next build",
-    "start": "next start",
+    "build": "node scripts/db-prep.js && prisma generate && next build",
+    "start": "node scripts/db-prep.js && prisma db push && next start",
     "lint": "eslint",
     "seed": "node prisma/seed.js",
     "postinstall": "node scripts/db-prep.js && prisma generate"
