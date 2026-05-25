@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "node scripts/db-prep.js && prisma generate && prisma db push && next dev",
     "build": "node scripts/db-prep.js && prisma generate && next build",
-    "start": "node scripts/db-prep.js && prisma db push && next start",
+    "start": "node scripts/db-prep.js && prisma db push && node prisma/seed.js && next start",
     "lint": "eslint",
     "seed": "node prisma/seed.js",
     "postinstall": "node scripts/db-prep.js && prisma generate"
